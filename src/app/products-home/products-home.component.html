@@ -1,0 +1,12 @@
+<!--
+  ProductsHomeComponent Template
+
+  Displays the header, a list of products, an order submission form, and the footer.
+-->
+<app-header heading="View all {{category}}"></app-header>
+<div class="products-grid">
+  <div class="product-cell" *ngFor="let product of products">
+    <app-product [details]="product"></app-product>
+  </div>
+</div>
+<app-footer></app-footer>

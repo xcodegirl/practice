@@ -1,0 +1,13 @@
+<!--
+  ProductComponent Template
+
+  Displays a single product's details, including name, image, description,
+  current order count, and an add-to-cart form.
+-->
+<div style="border: 1px solid #ccc; padding: 16px; border-radius: 8px; max-width: 300px; text-align: center;">
+  <h2>{{ details.name }}</h2>
+  <img src="assets/products/{{ details.image }}" alt="Image" width="200" />
+  <p>{{ details.description }}</p>
+  <p>Already in cart: {{ total }}</p>
+  <app-add-to-cart [(quantity)]="count" [(carttotal)]="total" (addToCart)="onAddToCart()" (removeFromCart)="onRemoveFromCart()"></app-add-to-cart>
+</div>
